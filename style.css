@@ -1,6 +1,72 @@
 :root {
   color: #333;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#container {
+  max-width: 80rem;
+  background-color: #ccc;
+  margin: 0 auto;
+  padding: 4rem;
+}
+
+/* GRID */
+section {
+  display: grid;
+  margin-bottom: 4rem;
+}
+
+.experience-container {
+  grid-template-columns: 25% auto;
+}
+
+.modules-container {
+  grid-template-columns: 25% auto 25%;
+  grid-gap: 1rem;
+}
+
+.experience-module {
+  padding: 0 1rem 2rem;
+}
+
+.header {
+  grid-template-columns: 50% 50%;
+}
+
+/* TEXT */
+.id-container > .section-title {
+  border: none;
+}
+
+.id-name {
+  font-size: 6.7rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h2, .text {
+  margin: 0;
+  padding: 1rem 0;
+  border-top: 1rem solid #333;
+}
+
+.summary-text {
+  font-size: 1.8rem;
+}
+
+.experience-module {
+  font-size: 1.5rem;
+}
+.experience-module .title {
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
