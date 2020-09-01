@@ -20,15 +20,14 @@
 const name = document.querySelector(".id-name");
 const profileText = document.querySelector(".profile-text");
 
-data = fetch("https://gateway.marvel.com:443/v1/public/characters?name=captain%20america&apikey=2510a609a0195f2f69057f425a7f9609")
-    .then(res => res.json());
-    // .then(data => JSON.parse(data));
-console.log(data.results[0].name);
+fetch("https://gateway.marvel.com:443/v1/public/characters?name=captain%20america&apikey=2510a609a0195f2f69057f425a7f9609")
+    .then(res => res.json()
+    .then(data => console.log(data.results[0].name));
 
 
 
 /* localAPI */
-characterLocalAPI = [
+/* characterLocalAPI = [
 	{
   "code": 200,
   "status": "Ok",
@@ -439,7 +438,7 @@ characterLocalAPI = [
   }
 }
 ];
-
+ */
 
 
 // console.log(characterLocalAPI);
