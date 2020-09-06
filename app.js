@@ -20,9 +20,20 @@
 const name = document.querySelector(".id-name");
 const profileText = document.querySelector(".profile-text");
 
-fetch("https://gateway.marvel.com:443/v1/public/characters?name=captain%20america&apikey=2510a609a0195f2f69057f425a7f9609")
-    .then(res => res.json()
-    .then(data => console.log(data.results[0].name));
+// fetch("https://gateway.marvel.com:443/v1/public/characters?name=captain%20america&apikey=2510a609a0195f2f69057f425a7f9609")
+//     .then(res => res.json())
+//     .then(data => {
+//       character = data.data.results[0];
+//       name.innerText = character.name;
+//     } 
+// );
+
+fetch("https://comicvine.gamespot.com/api/characters/?api_key=08f6a97837c9230eca2f50206dad03231859bdcd&filter=name:captain%20america&format=json")
+.then(res=>{res.json()})
+.then(data => {
+  console.log( data.results );
+});
+
 
 
 
@@ -446,4 +457,3 @@ fetch("https://gateway.marvel.com:443/v1/public/characters?name=captain%20americ
 
 
 // name.innerText = characterLocalAPI[0].data.results[0].name;
-name.innerText = data.name;
